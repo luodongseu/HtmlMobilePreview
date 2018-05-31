@@ -6,7 +6,12 @@ import closeBtn from '../../assets/closeBtn.png';
 /**
  * html 手机预览
  *
- * @from https://github.com/wangfupeng1988/wangEditor
+ * @Usage example:
+ *
+ *  render() {
+ *   return (<HtmlMobilePreview title='我的预览' html='<h1>ABC</h1><img src="../../a.png"></img>'/>);
+ * }
+ *
  */
 export default class HtmlMobilePreview extends PureComponent {
 

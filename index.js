@@ -9,9 +9,12 @@ import closeBtn from '../../assets/closeBtn.png';
  * @Usage example:
  *
  *  render() {
- *   return (<HtmlMobilePreview title='我的预览' html='<h1>ABC</h1><img src="../../a.png"></img>'/>);
+ *   return (
+ *   <HtmlMobilePreview title='我的预览'
+ *                      html='<h1>ABC</h1><img src="../../a.png"></img>'
+ *                      onClose={()=>console.log('Preview closed')}/>
+ *    );
  * }
- *
  */
 export default class HtmlMobilePreview extends PureComponent {
 
@@ -34,6 +37,9 @@ export default class HtmlMobilePreview extends PureComponent {
     this.setState({
       displayPreview: open,
     });
+    if (!open) {
+      this.props.onClose();
+    }
   }
 
   render() {
